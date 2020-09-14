@@ -1,25 +1,25 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
-/react-frontend/node_modules
-/react-frontend/.pnp
-.pnp.js
-/flask-backend/__pychache__
-/flask-backend/venv
+# # dependencies
+# /react-frontend/node_modules
+# /react-frontend/.pnp
+# .pnp.js
+# /flask-backend/__pychache__
+# /flask-backend/venv
 
-# testing
-/react-frontend/coverage
+# # testing
+# /react-frontend/coverage
 
-# production
-/react-frontend/build
+# # production
+# /react-frontend/build
 
-# misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+# # misc
+# .DS_Store
+# .env.local
+# .env.development.local
+# .env.test.local
+# .env.production.local
 
-/react-frontend/npm-debug.log*
-/react-frontend/yarn-debug.log*
-/react-frontend/yarn-error.log*
+# /react-frontend/npm-debug.log*
+# /react-frontend/yarn-debug.log*
+# /react-frontend/yarn-error.log*
