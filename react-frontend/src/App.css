@@ -36,3 +36,59 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+/* nieuw */
+
+.App {
+  text-align: center;
+}
+.mainBody{
+  background-color: #faebd7;
+  padding: 30px;
+  
+}
+
+.item-wrapper {
+  width: 1200px;
+  min-height: 100vh;
+  margin: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-items: center;
+  flex-wrap: wrap;
+
+}
+
+.item-box {
+  background-color: #f9f9f9;
+  width: 30%;
+  min-height: 180px;
+  display: inline-block;
+  margin: auto;
+  -webkit-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.15);
+  box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.15);
+  margin: 0 auto 40px auto;
+  color: #464646;
+}
+
+/* .item-box .coin-name{
+   
+} */
+
+.gains-box h3{
+  font-size: 26px ;
+  margin-top: 5px;
+}
+
+.gains-box .gains-title{
+  margin: 5px;
+  color: #929292;
+}
+
+.gains-box{
+  display: flex;
+  justify-content: space-evenly;
+}
