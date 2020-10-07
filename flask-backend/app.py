@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 from flask import current_app as app
 from flask_bootstrap import Bootstrap
+from flask_cors import CORS
 import os
 
 def create_app():
@@ -13,6 +14,6 @@ def create_app():
 
 # create app and db
 app = create_app()
-
+ 
 # Init bootstrap
 Bootstrap(app)

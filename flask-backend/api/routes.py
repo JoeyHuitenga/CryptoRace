@@ -15,9 +15,9 @@ def index():
 
 # POST to database
 
-@main.route("/coins", methods=['POST'])
+@main.route("/coins", methods=['GET'])
 def coins():
-       if request.method == 'POST':
+       if request.method == 'GET':
               
               "Import coin data"
               coins_input = ["LTO", "DUSK", "ANKR", "BAND", "ETH", "RLC", "COTI"]
