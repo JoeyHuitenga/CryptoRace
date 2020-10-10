@@ -6,7 +6,8 @@ function App() {
   return (
     <div className = "App">
     <div className = "mainBody" >
-    <div className="item-wrapper">
+    <div className="homepage-wrapper">
+    <h1>Bibtobot Coins</h1>
     <CoinListItem />
     </div>
     </div>

@@ -1,28 +1,63 @@
 import React, { useEffect, useState } from "react"
 
-export default function CoinListItem() {
-    const [posts, setPosts] = useState([])
+function useCoins() {
+	const [coins, setCoins] = useState([])
 
-    useEffect(() => {
-		fetch("http://127.0.0.1:5000/")
+	useEffect(() => {
+		console.log('useEffect called!')
+		fetch("http://127.0.0.1:5000/coins")
 			.then((response) => response.json())
 			.then((data) => {
-				setPosts(data) 
+				setCoins(data.Coins) 
 			})
 	}, [])
 
+	console.log(coins);
+
+	return coins
+}
+
+export default function CoinListItem() {
+	const coins = useCoins() 
+
+	console.log(coins)
+
+	if (coins.length === 0) {
+		console.log('ik heb niks')
+		return (
+			<h1>Coins are loading...</h1>
+		);	
+	} 
+
 	return (
-		<div>
-			<h1>Cool app</h1>
-			{posts.map((item) => (
-				<li>
-					<h2>{item.title}</h2>
-					<p>{item.description}</p>
-				</li>
-			))}
+		<div className="item-wrapper">
+			{coins.length > 0 ? (
+				coins.map((coin) => (
+				<div className="item-box">
+                	<h1 className="coin-name">{coin.id}</h1>
+					<div className="gains-box">
+						<div className="gains-daily">
+							<h5 className="gains-title">Daily gains</h5>
+							<h3>{coin.gains_daily}<span className="percentage">%</span></h3>
+						</div>
+						<div className="gains-weekly">
+							<h5 className="gains-title">Weekly gains</h5>
+							<h3>{coin.gains_weekly}<span className="percentage">%</span></h3>
+						</div>
+						<div className="gains-monthly">
+							<h5 className="gains-title">Monthly gains</h5>
+							<h3>{coin.gains_monthly}<span className="percentage">%</span></h3>
+						</div>
+					</div>
+                </div>
+				))
+			) : (
+				<h1>Yeah</h1>
+			)}
 		</div>
 	)
 }
+
 
 
 

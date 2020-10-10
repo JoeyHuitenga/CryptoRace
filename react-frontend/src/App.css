@@ -50,13 +50,16 @@
   
 }
 
+.homepage-wrapper {
+  min-height: 100vh;
+}
+
 .item-wrapper {
-  width: 1200px;
   min-height: 100vh;
   margin: auto;
   display: flex;
   align-items: flex-start;
-  justify-items: center;
+  justify-content: space-between;
   flex-wrap: wrap;
 
 }
